@@ -79,7 +79,7 @@ li.TodoItem{
       color:#fff;
       font-weight: 700;
   }
-  li.TodoItem.true .TodoItemText{   
+  li.TodoItem.checked .TodoItemText{   
     background-color: #2664fa;
     color:#fff;
     text-decoration: line-through;  
@@ -87,7 +87,12 @@ li.TodoItem{
   .TodoItemDel{
     position: absolute;
     right: 10px;
-    top: 0;
+    top: 17px;
     width: 20px;
     height: auto;
+    cursor: pointer;
+    text-align: center;
+  }
+  .TodoItemDel:hover, .TodoItemDel:focus{
+    color:#750b0b
   }

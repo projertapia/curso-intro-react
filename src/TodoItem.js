@@ -1,24 +1,23 @@
 import React, { Children } from "react";
 import './TodoItem.css'
 function TodoItem(props){
-    let classTodoItem = 'TodoItem ' + props.completed;
-    let checkboxChecked;
-    if(props.completed == 'true'){
-        checkboxChecked = "checked";
-    }else{
-        checkboxChecked = "";
+    const onComplete = ()=>{
+        alert('Ya completaste el todo: ' + props.text);
+    };
+    const onDelete = () => {
+        alert('Borraste el todo: ' + props.text);
     }
     return(
-        <li className={classTodoItem}>            
+        <li className={`TodoItem ${props.completed && 'checked'}`}>
             <label className="checkboxContainer">
-                <input type="checkbox" checkboxChecked/>
-                <span className="checkmark"></span>
+                <input type="checkbox"/>
+                <span className="checkmark" onClick={onComplete}></span>
             </label>
             <p className="TodoItemText">
                 {props.text}
-                <span className="TodoItemDel"><p>X</p></span>
+                <span className="TodoItemDel" onClick={onDelete}>X</span>
             </p>
-            
+          
         </li>
     )
 }

@@ -1,4 +1,40 @@
 .TodoCounter{
     font-size: 24px;
+    text-align: left;
+    padding:35px 35px;
+    margin:0 auto;
+    width: 100%;
+    background-position: right center;
+    background-size: cover;
+    color:#fff;
+    max-width: calc(100% - 70px);
+}
+.TodoCounterIndicator{
+    width: 80%;
+    max-width: 960px;
+    background-color: #292d3c;
+    border-radius: 50px;
+    height: 15px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.TodoCounterLevel{
+    max-width: 960px;
+    background-color: #66ffa7;
+    border-radius: 50px;
+    height: 15px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+}
+.TodoCounterText{
+    position: absolute;
+    left: calc(50% - 20px);
+    top: -20px;
     text-align: center;
+    width: 40px;
+    font-weight: 600;
+    color: #838383;
 }

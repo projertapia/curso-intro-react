@@ -1,0 +1,16 @@
+.TodoSearch{
+    margin: 25px auto;
+    border-radius: 50px;
+    padding: 10px;
+    border: 1px solid #2f303b;
+    max-width: 960px;
+    width: 90%;
+    display: block;
+    text-align: center;
+    background-color: #2b2d3d;
+    color:#fff;
+}
+.TodoSearch:active,.TodoSearch:hover,.TodoSearch:focus{
+    border: 1px solid #66ffa7;
+    outline: none;
+}

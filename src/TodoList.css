@@ -1,0 +1,10 @@
+section.TodoList{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+section.TodoList ul{
+    padding: 0;
+    list-style: none;
+}

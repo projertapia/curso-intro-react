@@ -1,0 +1,93 @@
+li.TodoItem{
+    padding: 0px;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: block;
+    color:#fff;
+    position: relative;
+}
+.checkboxContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    top: 13px;
+  }
+  .checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #1c2023;
+    border:1px solid #2e2f3a;
+    border-radius:5px
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkboxContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkboxContainer input:checked ~ .checkmark {
+    background-color: #65fea6;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkboxContainer:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkboxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #1e1f23;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .TodoItemText{
+      margin-left: 35px;
+      background-color: #272e3c;
+      padding: 15px;
+      border-radius: 10px;
+      color:#fff;
+      font-weight: 700;
+  }
+  li.TodoItem.true .TodoItemText{   
+    background-color: #2664fa;
+    color:#fff;
+    text-decoration: line-through;  
+}
+  .TodoItemDel{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 20px;
+    height: auto;
+  }

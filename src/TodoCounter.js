@@ -2,7 +2,7 @@ import React from "react";
 import './TodoCounter.css';
 
 function TodoCounter({total,completed}){
-    const promedioTodos = (completed/total)*100;
+    const promedioTodos = Math.round((completed/total)*100);
     return(
         <React.Fragment>
             <h2 className="TodoCounter">Mi lista <br/> de Tareas</h2>

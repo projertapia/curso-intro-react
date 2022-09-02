@@ -8,5 +8,6 @@
     background-image: url(./../images/icon-plus.svg);
     border-radius: 50px;
     border:3px solid #1e1f23;
-    cursor:pointer
+    cursor:pointer;
+    z-index: 1;
 }

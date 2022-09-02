@@ -1,8 +1,11 @@
+import react from "react";
 import React from "react";
+import { TodoContext } from "../TodoContext";
 import './TodoCounter.css';
 
-function TodoCounter({total,completed}){
-    const promedioTodos = Math.round((completed/total)*100);
+function TodoCounter(){
+    const {totalTodos,completedTodos} = React.useContext(TodoContext);
+    const promedioTodos = Math.round((completedTodos/totalTodos)*100);
     return(
         <React.Fragment>
             <h2 className="TodoCounter">Mi lista <br/> de Tareas</h2>
@@ -10,7 +13,7 @@ function TodoCounter({total,completed}){
                 <span className="TodoCounterLevel" style={{width:promedioTodos+'%'}}></span>
                 <p className="TodoCounterText">{promedioTodos}%</p>
             </span>
-            <p className="TodoCounterleyenda">{completed} de {total}</p>
+            <p className="TodoCounterleyenda">{completedTodos} de {totalTodos}</p>
         </React.Fragment>
     )
 }

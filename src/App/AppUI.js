@@ -25,7 +25,7 @@ function AppUI(){
             {/* Podemos acceder a nuestro contexto con el consumer */}
             <TodoList>
                 {error && <p>Desesperate, hubo un error...</p>}
-                {loading && <p>Estamos cargando, no desesperes...</p>}
+                {loading && <p>Estamos cargando, no desesperes... </p>}
                 {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>}
 
                 {searchedTodos.map(todo=>(
